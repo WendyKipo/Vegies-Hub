@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Place Order | Vegies Hub</title>
+  <link rel="stylesheet" href="order.css" />
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+
+  <script>
+ window.onload = function () {
+  const params = new URLSearchParams(window.location.search);
+  const product = params.get("product");
+  const price = parseFloat(params.get("price"));
+
+  document.getElementById("product-name").textContent = product || "product";
+  document.getElementById("product-input").value = product || "";
+  document.getElementById("price").value = price || "";
+
+  if (price) {
+    document.getElementById("price-display").textContent = `₵${price} per fruit`;
+  }
+
+  const quantityInput = document.getElementById("quantity");
+  const totalCostDisplay = document.getElementById("total-cost-display");
+
+  quantityInput.addEventListener("input", function () {
+    const quantity = parseInt(quantityInput.value) || 0;
+    const totalCost = quantity * price;
+    totalCostDisplay.textContent = `Total Cost: ₵${totalCost.toFixed(2)}`;
+  });
+};
+
+
+function payWithPaystack(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const quantity = document.getElementById("quantity").value;
+  const price = parseFloat(document.getElementById("price").value);
+  const amountGHS = quantity * price;
+  const amountPesewas = amountGHS * 100;
+
+  const handler = PaystackPop.setup({
+    key: 'pk_test_4756152dac3bee2bb59e33cc0a8bad76e1f9658c',
+    email: email,
+    amount: amountPesewas,
+    currency: "GHS",
+    firstname: name,
+    label: "Vegies Hub Order",
+    callback: function (response) {
+      document.getElementById("order-form").submit();
+    },
+    onClose: function () {
+      alert("Payment was not completed.");
+    }
+  });
+
+  handler.openIframe();
+}
+
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <section>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo-combo">
+          <img src="./logo.jpg" alt="Vegies Hub Logo" class="logo-img">
+          <span>Vegies Hub</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="team.html">The team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Order Section -->
+    <main class="order-container">
+      <h1>Place Your Order</h1>
+      <p>Be sure that Vegies Hub provides you with the best products and services, at affordable prices to suit every pocket.</p>
+
+      <p>You are ordering <strong id="product-name">[Product]</strong></p>
+      <p><strong id="price-display"></strong></p>
+
+      <!-- Order Form -->
+      <form id="order-form" class="order-form" action="https://formspree.io/f/mvgrkaal" method="POST">
+        <!-- Hidden inputs -->
+        <input type="hidden" id="product-input" name="product" />
+        <input type="hidden" id="price" name="price" />
+
+        <!-- User inputs -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required/>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required/>
+
+        <label for="quantity">Number of fruits or heads</label>
+        <input type="number" id="quantity" name="quantity" min="1" required/>
+        
+        <p><strong id="total-cost-display">Total Cost: ₵0.00</strong></p>
+
+
+        <label for="address">Delivery Address</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <!-- Pay and Submit Button -->
+        <button type="button" class="order-btn" onclick="payWithPaystack(event)">Pay & Submit Order</button>
+
+
+ 
+      </form>
+
+      <p style="margin-top: 20px; color: #555;">
+        <strong>Note:</strong> After submitting your order, we will contact you to confirm payment and delivery details.
+      </p>
+    </main>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <strong>Our Location:</strong><br>
+      Wa, Upper West Region of Ghana<br>
+      Near the St. Francis Xavier Minor Seminary
+      <p>© 2025 Vegies Hub. All rights reserved.</p>
+      <p>Developer; Wendy Kipo</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+

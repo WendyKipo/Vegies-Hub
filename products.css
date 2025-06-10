@@ -1,0 +1,169 @@
+ /* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  }
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  /* PRODUCTS SECTION */
+.products-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+
+  }
+  
+  .products-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #3b7c30;
+  }
+  
+  /* Product Row */
+  .product-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .product-row.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .product-image {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .product-info {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .product-info h2 {
+    color: #3b7c30;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  
+
+    /* Footer */
+    /* ========== Footer ========== */
+    .footer {
+        background-color: #333;
+        color: #eee;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 15px;
+        width: 100%;
+      }
+
+    .others h3{
+        color: #3b7c30;
+    }
+
+
+
+    .order-btn {
+        background-color: #3b7c30;        /* Vegies Hub green */
+        color: #fff;                      /* White text */
+        border: none;
+        padding: 12px 24px;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      
+      .order-btn:hover {
+        background-color: #2e6124;    
+        transform: scale(1.05);           
+      }
+      
+      .order-btn:active {
+        background-color: #244c1c;     
+        transform: scale(0.98);           
+      }
+      
+      
+
+  .logo-img {
+    height: 50px;
+    width: auto;
+  }
+  
+  .logo-combo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+      

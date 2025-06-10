@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  }
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+
+   
+  /* Footer */
+    /* ========== Footer ========== */
+    .footer {
+        background-color: #333;
+        color: #eee;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 15px;
+        width: 100%;
+      }
+
+
+      
+  .logo-img {
+    height: 50px;
+    width: auto;
+  }
+  
+  .logo-combo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+
+   /* PRODUCTS SECTION */
+   .Team-members{
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+
+  }
+  
+  .Team-members h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #3b7c30;
+  }
+  
+  /* Product Row */
+  .member-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  
+  
+  .member-image {
+    flex: 1;
+    min-width: 200px;
+    max-width: 260px;
+  }
+  
+  .member-image img {
+    width: 100%;
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .member-info {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .member-info h2 {
+    color: #3b7c30;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .member-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }

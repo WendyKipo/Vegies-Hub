@@ -1,0 +1,128 @@
+/* Footer */
+    /* ========== Footer ========== */
+    .footer {
+        background-color: #333;
+        color: #eee;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 15px;
+        width: 100%;
+      }
+
+
+ /* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    background-image: url('./');
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  }
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+
+  .order-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .order-container h1 {
+    color: #3b7c30;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .order-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  .order-form input,
+  .order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .order-btn {
+    margin-top: 20px;
+    background-color: #3b7c30;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-btn:hover {
+    background-color: #2e6124;
+  }
+
+ 
+
+  
+  .logo-img {
+    height: 50px;
+    width: auto;
+  }
+  
+  .logo-combo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  

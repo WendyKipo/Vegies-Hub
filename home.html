@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head  >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vegies Hub Official Site</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+ 
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-combo">
+        <img src="./logo.jpg" alt="Vegies Hub Logo" class="logo-img">
+        <span>Vegies Hub</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="team.html">The team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <!-- Main Section -->
+   
+  <header class="main">
+    <div class="container">
+      <h1>Welcome to Vegies Hub</h1>
+      <p>Fresh, organic vegetables straight from our farm to your table.</p>
+    </div>
+  </header>
+  
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Who are we?</h2>
+      <p>
+        Vegies Hub is a local farm dedicated to growing fresh, organic vegetables using sustainable practices. We believe in quality, health, and community.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>A quick view of our farm</h2>
+      <div class="image-grid">
+        <div class="image-item">
+          <img src="./tomatoes-8181194_1280.jpg" alt="Tomatoes" />
+          <p>Juicy red tomatoes freshly picked every morning.</p>
+        </div>
+        <div class="image-item">
+          <img src="./petr-magera-PcJi7LH_1dQ-unsplash.jpg" alt="Lettuce" />
+          <p>Crisp green lettuce, perfect for your salad bowls.</p>
+        </div>
+        <div class="image-item">
+          <img src="./k15-photos-i_DbKwALyrQ-unsplash.jpg" alt="man" />
+          <p>Sweet and crunchy carrots full of nutrients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="newsletter">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Get updates on fresh produce, seasonal offers, and farm news.</p>
+      <form>
+               <!-- User Type Selection -->
+<div class="user-type">
+    <label><strong>I am a </strong></label>
+    
+    <input type="radio" id="chef" name="user_type" value="Professional Chef" required>
+    <label for="chef">Professional Chef</label>
+    
+    <input type="radio" id="home" name="user_type" value="Home User">
+    <label for="home">Home cook</label>
+  </div>
+  
+
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Review Form -->
+ 
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Leave a Review</h2>
+    <p>We love to hear from you!</p>
+
+    <form class="contact-form" id="review-form" action="https://formspree.io/f/mqabpqqe" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email (optional)" />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="contact-btn">Send Message</button>
+    </form>
+
+    <p id="review-response"></p>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+        <strong>Our Location:</strong><br>
+        Wa,upper west region of Ghana<br>
+        Near the St.Francis Xavior Minor Sem
+      
+      <p>© 2025 Vegies Hub. All rights reserved.</p>
+      <p>Developer; Wendy Kipo</p>
+    </div>
+  </footer>
+
+  <script>
+    const reviewForm = document.getElementById('review-form');
+    const reviewResponse = document.getElementById('review-response');
+  
+    if (reviewForm) {
+      reviewForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(reviewForm);
+  
+        try {
+          const response = await fetch(reviewForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+  
+          if (response.ok) {
+            reviewResponse.style.color = 'green';
+            reviewResponse.textContent = '✅ Thank you for your review!';
+            reviewForm.reset();
+          } else {
+            reviewResponse.style.color = 'red';
+            reviewResponse.textContent = '❌ Could not send your review. Please try again.';
+          }
+        } catch (error) {
+          reviewResponse.style.color = 'red';
+          reviewResponse.textContent = '❌ An error occurred. Please try again.';
+        }
+      });
+    }
+  </script>
+  
+
+</body>
+</html>
+ 

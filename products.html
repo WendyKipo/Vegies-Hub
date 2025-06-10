@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head  >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Products - Vegies Hub</title>
+  <link rel="stylesheet" href="products.css"/>
+  <link rel="stylesheet" href="order.html">
+  
+  <script>
+    function goToOrder(productName, price) {
+  window.location.href = `order.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(price)}`;
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-combo">
+        <img src="./logo.jpg" alt="Vegies Hub Logo" class="logo-img">
+        <span>Vegies Hub</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="team.html">The team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <!-- Products Section -->
+  <main>
+    <section class="products-section">
+      <h1>Our Fresh Produce</h1>
+
+      <!-- Product 1 -->
+      <div class="product-row">
+        <div class="product-image">
+          <img src="./anna-evans-SztWGpNJQEk-unsplash.jpg" alt="cabbage">
+        </div>
+        <div class="product-info">
+          <h2>Cabbage</h2>
+          <p>Our farm-fresh cabbage is crisp, dense, and packed with nutrients. Ideal for salads, slaws, and cooked dishes, it offers a slightly sweet flavor and satisfying crunch. Grown without harmful chemicals, our cabbages are harvested at peak ripeness. Rich in vitamins K and C, it's a heart-healthy and immune-boosting choice. Whether shredded or stewed, it retains its texture and flavor. Store it cool and dry to keep it fresh longer. Great for home cooks and chefs alike</p>
+          <p><strong>price:</strong> ₵70 per head (500g)</p>
+          <button onclick="goToOrder('Cabbage' , 70)" class="order-btn">Place Order</button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-row reverse">
+        <div class="product-image">
+          <img src="./petr-magera-YLeRHRiRgts-unsplash.jpg" alt="lettuce">
+        </div>
+        <div class="product-info">
+          <h2>Lettuce</h2>
+          <p>Tender and leafy, our lettuce is grown naturally for the freshest taste and texture. It’s perfect for salads, sandwiches, and wraps, offering a refreshing bite and mild flavor. We harvest early in the morning to lock in moisture and nutrients. Rich in fiber and low in calories, it supports a healthy diet. Choose from crisphead or loose-leaf varieties depending on your preference. Keep refrigerated to maintain its crunch. Your go-to green for daily freshness.</p>
+          <p><strong>price:</strong> ₵30 per head (40g)</p>
+          <button onclick="goToOrder('Lettuce' , 30)" class="order-btn">Place Order</button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-row">
+        <div class="product-image">
+          <img src="./elle-hughes-sFU3-fwZ6nQ-unsplash.jpg" alt="Chilli pepper">
+        </div>
+        <div class="product-info">
+          <h2>Chilli pepper</h2>
+          <p> Spice up your meals with vibrant, fiery chili peppers from the perfect vegies hub basket. Grown under the sun, they pack heat and rich flavor, ideal for sauces, stews, and marinades. Our peppers range from mildly hot to bold and intense. Full of antioxidants and vitamin C, they boost flavor and immunity. They’re harvested at peak color for maximum taste. Use fresh, dried, or blended into pastes. For heat lovers and flavor seekers alike.</p>
+          <p><strong>price:</strong> ₵3 per fruit (20g)</p>
+          <button onclick="goToOrder('Chilli pepper' , 3)" class="order-btn">Place Order</button>
+        </div>
+      </div>
+
+      <!--Product 4-->
+      <div class="product-row reverse">
+        <div class="product-image">
+          <img src="./nick-fewings-IZq1FV87qpM-unsplash.jpg" alt="Crunchy Carrots">
+        </div>
+        <div class="product-info">
+          <h2>Carrots</h2>
+          <p>Sweet, crunchy, and full of color, our carrots are a versatile kitchen staple. Perfect raw, roasted, or juiced, they add a natural sweetness and bright hue to any dish. High in beta-carotene and fiber, they’re a vision-boosting, gut-friendly choice. We grow them in rich soil for flavor-packed roots. Their crisp texture makes them great for snacks or salads. Wash and store in cool conditions for longevity. Vegies hub,is definately a farm favorite for kids and adults.</p>
+          <p><strong>price:</strong> ₵30 per fruit (60g)</p>
+          <button onclick="goToOrder('Carrots' , 30)" class="order-btn">Place Order</button>
+        </div>
+      </div>
+
+        <!-- Product 5 -->
+        <div class="product-row">
+            <div class="product-image">
+              <img src="./caglar-oskay-edAQ_EZ9HHA-unsplash.jpg" alt="green pepper">
+            </div>
+            <div class="product-info">
+              <h2>Green pepper(for salads)</h2>
+              <p>Our green peppers are juicy, crisp, and freshly harvested for top flavor. Ideal for salads, stir-fries, and stuffing, they offer a mild sweetness with zero heat. Packed with vitamin C and fiber, they support a healthy, balanced diet. Their bright green skin signals freshness and quality. Picked at just the right time for the best crunch. Keep them chilled to preserve their texture. A salad essential and kitchen must-have</p>
+              <p><strong>price:</strong> ₵10 per fruit (100g)</p>
+              <button onclick="goToOrder('Green pepper' , 10)" class="order-btn">Place Order</button>
+            </div>
+          </div>
+
+            <!--Product 6-->
+      <div class="product-row reverse">
+        <div class="product-image">
+          <img src="./eric-prouzet-Ky6x9T8j128-unsplash.jpg" alt="cucumber">
+        </div>
+        <div class="product-info">
+          <h2>Cucumbers</h2>
+          <p><strong>price:</strong>  ₵60 per fruit (200g)</p>
+          <p>Cool, hydrating, and refreshing—our cucumbers are perfect for salads, sandwiches, or eating fresh. Grown in fertile soil and harvested with care, they’re crisp and mildly sweet. Low in calories and high in water content, they’re excellent for hydration and skin health. The thin skin and tender seeds mean less prep and more flavor. Great for pickling or slicing raw. Keep refrigerated for best quality. A summer staple straight from the farm!</p>
+          <button onclick="goToOrder('Cucumber', 60)" class="order-btn">Place Order</button>
+        </div>
+      </div>
+
+       <!-- Product 7-->
+       <div class="product-row">
+        <div class="product-image">
+          <img src="./waldemar-jF62cuCoGWQ-unsplash.jpg" alt="Fresh tomatoes">
+        </div>
+        <div class="product-info">
+          <h2>Tomatoes</h2>
+          <p>Juicy, flavorful, and sun-ripened, our tomatoes are a kitchen essential. Perfect for sauces, salads, sandwiches, or snacking, they offer rich taste and bright color. Grown with care and no harmful chemicals, they burst with freshness. Rich in lycopene, they support heart health and immunity. We pick them at peak ripeness for the best flavor. Use fresh or cooked in endless recipes. Always ripe, always ready.</p>
+          <p><strong>price:</strong> ₵5 per fruit (30g)</p>
+          <button onclick="goToOrder('Tomatoes' , 5)" class="order-btn">Place Order</button>
+        </div>
+      </div>
+
+           <!--Product 8-->
+           <div class="product-row reverse">
+            <div class="product-image">
+              <img src="./eggs" alt="Garden eggs">
+            </div>
+            <div class="product-info">
+              <h2>Garden eggs</h2>
+              <p>
+                Vegies hub serves glossy, firm, and rich in flavor garden eggs—ideal for grilling, baking, or stewing. With their soft flesh and slightly earthy taste, they add depth to any dish. Grown in nutrient-rich soil, they’re harvested for perfect size and texture. High in fiber and antioxidants,garden are great for heart and digestive health. Their creamy and sometimes white color signals their freshness and nutritional value. Best when firm and stored cool. A must-have for creative cooking.</p>
+                <p><strong>price:</strong> ₵10 per fruit (80g)</p>
+                <button onclick="goToOrder('Garden eggs' , 10)" class="order-btn">Place Order</button>
+            </div>
+          </div>
+
+
+
+    </section>
+
+    <section class="others">
+        <h3>Our vegetables to be included on our farm soon due to public demand</h3>
+        <ol>
+            <li>Spinach</li><p>Fast-growing leafy green, ideal for salads, smoothies, and cooking.
+
+                High in iron, vitamins A, C, and K.
+                
+                Can be harvested multiple times with proper cutting.
+            </p>
+
+            <li>Okra</li><p>Popular in soups and stews, especially in warmer climates.
+
+                Nutritious and high in fiber, folate, and vitamin C.
+                
+                Grows well in warm, humid conditions.
+            </p>
+
+            <li>Spring onions</li><p>Quick to grow and popular for garnishing and flavoring dishes.
+
+                Easy to market in bunches.
+                
+                Minimal space requirements and compatible with companion planting.
+            </p>
+        </ol>
+    </section>
+  </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <strong>Our Location:</strong><br>
+            Wa,upper west region of Ghana<br>
+            Near the St.Francis Xavior Minor Sem
+          
+          <p>© 2025 Vegies Hub. All rights reserved.</p>
+          <p>Developer; Wendy Kipo</p>
+        </div>
+      </footer>
+    
+    </body>
+    </html>
